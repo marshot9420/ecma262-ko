@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import Markdown, { defaultUrlTransform, type Components } from "react-markdown";
+import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 
@@ -137,7 +138,7 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
     >
       <Markdown
         remarkPlugins={[remarkGfm]}
-        rehypePlugins={[rehypeSlug]}
+        rehypePlugins={[rehypeRaw, rehypeSlug]}
         components={markdownComponents}
         urlTransform={transformMarkdownUrl}
       >

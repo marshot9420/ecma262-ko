@@ -86,3 +86,70 @@
     animation-iteration-count: 1 !important;
   }
 }
+
+@layer components {
+  .prose .example-clause {
+    margin-block: 2rem;
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-left-width: 0.35rem;
+    background: var(--color-surface);
+  }
+
+  .prose .example-clause h2 {
+    margin: 0.75rem 0 1rem;
+    color: var(--color-foreground);
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .prose .example-clause p {
+    margin-block: 1rem;
+  }
+
+  .prose .example-clause p:last-child {
+    margin-bottom: 0;
+  }
+
+  .prose .example-clause-label {
+    display: inline-block;
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+  }
+
+  .prose .example-clause--normative-optional {
+    border-left-color: #2f6f9f;
+    background: #f2f8fc;
+  }
+
+  .prose .example-clause--normative-optional .example-clause-label {
+    color: #194f77;
+    background: #d9edf8;
+  }
+
+  .prose .example-clause--legacy {
+    border-left-color: #9a6b16;
+    background: #fff9eb;
+  }
+
+  .prose .example-clause--legacy .example-clause-label {
+    color: #704800;
+    background: #f8e7b7;
+  }
+
+  .prose .example-clause--normative-optional-legacy {
+    border-left-color: #7c4d92;
+    background: #faf5fc;
+  }
+
+  .prose .example-clause--normative-optional-legacy .example-clause-label {
+    color: #623475;
+    background: #eadcf0;
+  }
+}
