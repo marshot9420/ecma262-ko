@@ -39,6 +39,7 @@ function NavigationLink({
     <li>
       <NavLink
         to={document.path}
+        end
         onClick={onNavigate}
         className={({ isActive }) =>
           [

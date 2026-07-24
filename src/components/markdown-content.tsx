@@ -41,6 +41,19 @@ function transformMarkdownUrl(url: string): string {
 }
 
 const markdownComponents: Components = {
+  img({ src, alt, title }) {
+    if (!src) {
+      return null;
+    }
+
+    const resolvedSrc =
+      src.startsWith("/") && !src.startsWith("//")
+        ? `${import.meta.env.BASE_URL}${src.slice(1)}`
+        : src;
+
+    return <img src={resolvedSrc} alt={alt ?? ""} title={title} />;
+  },
+
   a({ href, children, title }) {
     if (!href) {
       return <span>{children}</span>;

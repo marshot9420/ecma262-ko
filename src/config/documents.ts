@@ -57,6 +57,14 @@ export const DOCUMENTS = [
     kicker: "ECMA-262 비공식 한국어 번역",
   },
   {
+    id: "overview-introduction",
+    title: "4. 개요",
+    navigationLabel: "4. 개요",
+    path: "/overview",
+    source: "/src/content/04-overview/index.md",
+    kicker: "4. 개요",
+  },
+  {
     id: "web-scripting",
     title: "4.1 웹 스크립팅",
     navigationLabel: "4.1 웹 스크립팅",
@@ -113,6 +121,14 @@ export const DOCUMENTS = [
     source:
       "/src/content/05-notational-conventions/02-algorithm-conventions.md",
     kicker: "5. 표기 규칙",
+  },
+  {
+    id: "ecmascript-data-types-and-values-introduction",
+    title: "6. ECMAScript 데이터 타입과 값",
+    navigationLabel: "6. ECMAScript 데이터 타입과 값",
+    path: "/ecmascript-data-types-and-values",
+    source: "/src/content/06-ecmascript-data-types-and-values/index.md",
+    kicker: "6. ECMAScript 데이터 타입과 값",
   },
   {
     id: "ecmascript-language-types",
@@ -1454,6 +1470,14 @@ export const DOCUMENTS = [
     kicker: "부록 C (참고) ECMAScript 엄격 모드",
   },
   {
+    id: "host-layering-points-introduction",
+    title: "부록 D (참고) 호스트 계층화 지점",
+    navigationLabel: "부록 D (참고) 호스트 계층화 지점",
+    path: "/annex-d",
+    source: "/src/content/annex-d/index.md",
+    kicker: "부록 D (참고) 호스트 계층화 지점",
+  },
+  {
     id: "host-hooks-summary",
     title: "D.1 호스트 훅",
     navigationLabel: "D.1 호스트 훅",
@@ -1602,6 +1626,10 @@ export const DOCUMENT_NAVIGATION = [
     children: [
       {
         type: "document",
+        documentId: "overview-introduction",
+      },
+      {
+        type: "document",
         documentId: "web-scripting",
       },
       {
@@ -1642,6 +1670,10 @@ export const DOCUMENT_NAVIGATION = [
     id: "ecmascript-data-types-and-values",
     label: "6. ECMAScript 데이터 타입과 값",
     children: [
+      {
+        type: "document",
+        documentId: "ecmascript-data-types-and-values-introduction",
+      },
       {
         type: "document",
         documentId: "ecmascript-language-types",
@@ -2437,6 +2469,10 @@ export const DOCUMENT_NAVIGATION = [
     id: "host-layering-points",
     label: "부록 D (참고) 호스트 계층화 지점",
     children: [
+      {
+        type: "document",
+        documentId: "host-layering-points-introduction",
+      },
       {
         type: "document",
         documentId: "host-hooks-summary",
