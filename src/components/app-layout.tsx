@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import { Outlet, useLocation } from "react-router";
+import { Outlet, useLocation, useNavigation } from "react-router";
 
+import { useDelayedBoolean } from "../hooks/use-delayed-boolean";
+import DocumentSkeleton from "./document-skeleton";
 import Sidebar from "./sidebar";
 import SiteHeader from "./site-header";
 
@@ -8,7 +10,12 @@ const DESKTOP_MEDIA_QUERY = "(min-width: 52rem)";
 
 export default function AppLayout() {
   const location = useLocation();
+  const navigation = useNavigation();
+
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const isRouteLoading = navigation.state === "loading";
+  const showDocumentSkeleton = useDelayedBoolean(isRouteLoading, 120);
 
   useEffect(() => {
     setIsSidebarOpen(false);
@@ -115,7 +122,11 @@ export default function AppLayout() {
           "min-[52rem]:pl-(--sidebar-width)",
         ].join(" ")}
       >
-        <main id="main-content" className="min-w-0">
+        <main
+          id="main-content"
+          className="min-w-0"
+          aria-busy={showDocumentSkeleton}
+        >
           <div
             className={[
               "mx-auto w-full max-w-248",
@@ -125,7 +136,7 @@ export default function AppLayout() {
               "lg:pb-32",
             ].join(" ")}
           >
-            <Outlet />
+            {showDocumentSkeleton ? <DocumentSkeleton /> : <Outlet />}
           </div>
         </main>
       </div>
