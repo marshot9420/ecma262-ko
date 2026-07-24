@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECMAScript® 2027 언어 명세</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="" data-root-path=".">
+    <header class="site-header">
+      <button
+        id="menu-button"
+        class="menu-button"
+        type="button"
+        aria-label="목차 열기"
+        aria-controls="sidebar"
+        aria-expanded="false"
+      >
+        <svg
+          aria-hidden="true"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+        >
+          <path d="M4 6h16" />
+          <path d="M4 12h16" />
+          <path d="M4 18h16" />
+        </svg>
+      </button>
+
+      <p class="site-title">
+        <a id="home-link" href="./index.html">
+          ECMAScript® 2027
+          <span>언어 명세</span>
+        </a>
+      </p>
+    </header>
+
+    <div class="layout">
+      <aside id="sidebar" class="sidebar" data-open="false">
+        <div class="sidebar-inner">
+          <nav aria-label="문서 목차">
+            <p class="sidebar-heading">목차</p>
+            <ol id="navigation-list" class="navigation-list"></ol>
+          </nav>
+        </div>
+      </aside>
+
+      <button
+        id="sidebar-overlay"
+        class="sidebar-overlay"
+        type="button"
+        aria-label="목차 닫기"
+        tabindex="-1"
+        data-open="false"
+      ></button>
+
+      <main class="main-content">
+        <header class="document-header">
+          <p class="document-kicker">ECMA-262 비공식 한국어 번역</p>
+          <h1 class="document-title">ECMAScript® 2027 언어 명세</h1>
+          <p class="document-description">
+            이 문서는 ECMAScript 언어의 구문과 실행 의미를 정의하는 ECMA-262
+            명세의 비공식 한국어 번역본입니다.
+          </p>
+        </header>
+
+        <aside class="notice">
+          공식 문서와 번역본의 내용이 다를 경우 Ecma International과 TC39가
+          제공하는
+          <a
+            class="link-button"
+            href="https://tc39.es/ecma262/multipage/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            최신 공식 영문 문서
+          </a>
+          를 기준으로 합니다.
+        </aside>
+
+        <section class="document-section" aria-labelledby="start-heading">
+          <h2 id="start-heading">문서 보기</h2>
+          <p>
+            각 목차 항목은 독립된 HTML 페이지로 구성되어 있습니다. 왼쪽
+            사이드바에서 번역할 절을 선택하십시오.
+          </p>
+
+          <p>
+            <a href="./pages/about-this-specification.html">
+              이 명세에 관하여부터 읽기
+            </a>
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
